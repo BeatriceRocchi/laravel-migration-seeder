@@ -15,7 +15,6 @@ class TrainsTableSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-        // $faker->addProvider(new \Faker\Provider\it_IT\Address($faker));
 
         for ($i = 0; $i < 50; $i++) {
             $new_train = new Train();

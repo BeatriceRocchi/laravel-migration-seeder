@@ -1,0 +1,11 @@
+header {
+    background-color: #c41228;
+
+    .nav-item-custom {
+        border-bottom: 2px solid #c41228;
+
+        &:hover {
+            border-bottom: 2px solid white;
+        }
+    }
+}

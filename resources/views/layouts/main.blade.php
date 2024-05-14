@@ -9,7 +9,7 @@
     {{-- Styles --}}
     @vite('resources/js/app.js')
 
-    <title>Train Station</title>
+    <title>Bool Trains | @yield('title') </title>
 </head>
 
 <body>

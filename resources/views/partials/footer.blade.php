@@ -1,3 +1,3 @@
 <footer>
-    <h2>Footer</h2>
+    <div class="text-end p-3">Made by Bea</div>
 </footer>

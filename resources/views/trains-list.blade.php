@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>I treni disponibili</h1>
+    <h1 class="text-center my-4">I treni disponibili</h1>
     <div class="container">
         <table class="table table-striped">
             <thead>
@@ -41,4 +41,8 @@
             {{ $trains->links() }}
         </div>
     </div>
+@endsection
+
+@section('title')
+    I treni
 @endsection
