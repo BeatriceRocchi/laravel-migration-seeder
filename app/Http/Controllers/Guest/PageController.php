@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Models\Train;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -12,8 +13,9 @@ class PageController extends Controller
         return view('home');
     }
 
-    public function newPage()
+    public function trainsList()
     {
-        return view('new-page');
+        $trains = Train::all();
+        return view('trains-list', compact('trains'));
     }
 }
