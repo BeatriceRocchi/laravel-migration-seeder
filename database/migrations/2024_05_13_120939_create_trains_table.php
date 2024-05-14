@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
-            $table->string('company', 25);
-            $table->string('code', 10);
+            $table->string('company', 50);
+            $table->char('code', 12);
             $table->string('slug', 50)->unique();
             $table->string('departure_station', 50);
             $table->string('arrival_station', 50);
