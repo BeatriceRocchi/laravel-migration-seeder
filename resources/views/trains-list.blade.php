@@ -5,7 +5,7 @@
     <div class="container">
         <table class="table table-striped">
             <thead>
-                <tr>
+                <tr class="text-center">
                     <th scope="col">ID</th>
                     <th scope="col">Azienda</th>
                     <th scope="col">Codice treno</th>
@@ -14,7 +14,7 @@
                     <th scope="col">Orario di partenza</th>
                     <th scope="col">Orario di arrivo</th>
                     <th scope="col">Carrozze</th>
-                    <th scope="col">In orario</th>
+                    <th scope="col">Partenza prevista</th>
                     <th scope="col">Cancellato</th>
                     <th scope="col">Descrizione</th>
                 </tr>
@@ -30,8 +30,19 @@
                         <td>{{ $train->departure_time }}</td>
                         <td>{{ $train->arrival_time }}</td>
                         <td>{{ $train->wagons }}</td>
-                        <td>{{ $train->is_on_time }}</td>
-                        <td>{{ $train->is_cancelled }}</td>
+
+                        @if ($train->is_on_time)
+                            <td>{{ $train->departure_time }}</td>
+                        @else
+                            <td class="fw-bold">Ritardo</td>
+                        @endif
+
+                        @if (!$train->is_cancelled)
+                            <td>-</td>
+                        @else
+                            <td class="fw-bold">Cancellato</td>
+                        @endif
+
                         <td>{{ $train->description }}</td>
                     </tr>
                 @endforeach
