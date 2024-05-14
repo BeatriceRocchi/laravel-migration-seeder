@@ -15,13 +15,15 @@ class TrainsTableSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
+        // $faker->addProvider(new \Faker\Provider\it_IT\Address($faker));
+
         for ($i = 0; $i < 50; $i++) {
             $new_train = new Train();
             $new_train->company = $faker->randomElement(['Italo', 'Trenitalia', 'Trenord', 'Busitalia Sita', 'Grandi Treni Espressi']);
             $new_train->code = $faker->randomLetter() . $faker->randomLetter() . $faker->randomNumber(3, true);
             $new_train->slug = $this->generateSlug($new_train->company, $new_train->code);
-            $new_train->departure_station = $faker->city;
-            $new_train->arrival_station =  $faker->city;
+            $new_train->departure_station = $faker->city();
+            $new_train->arrival_station =  $faker->city();
             $new_train->departure_time = $faker->time();
             $new_train->arrival_time = $faker->time();
             $new_train->wagons = $faker->numberBetween(1, 20);
