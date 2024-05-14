@@ -23,10 +23,10 @@
                 @foreach ($trains as $train)
                     <tr>
                         <td>{{ $train->id }}</td>
-                        <td>{{ $train->company }}</td>
-                        <td>{{ $train->code }}</td>
-                        <td>{{ $train->departure_station }}</td>
-                        <td>{{ $train->arrival_station }}</td>
+                        <td class="text-capitalize">{{ $train->company }}</td>
+                        <td class="text-uppercase ">{{ $train->code }}</td>
+                        <td class="text-capitalize">{{ $train->departure_station }}</td>
+                        <td class="text-capitalize">{{ $train->arrival_station }}</td>
                         <td>{{ $train->departure_time }}</td>
                         <td>{{ $train->arrival_time }}</td>
                         <td>{{ $train->wagons }}</td>
