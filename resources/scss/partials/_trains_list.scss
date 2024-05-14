@@ -1,3 +1,13 @@
 table tr {
     vertical-align: middle;
 }
+
+.page-item .page-link {
+    color: #c41228;
+}
+
+.page-item.active .page-link {
+    background-color: #c41228;
+    border-color: #c41228;
+    color: white;
+}
